@@ -1,0 +1,153 @@
+.profile {
+  display: flex;
+  max-width: 882px;
+  margin: 36px auto 46px;
+  font-family: Inter;
+  justify-content: space-between;
+}
+
+.profile__pic-button {
+  padding: 0;
+  background: url(../images/img__edit.png) center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border-radius: 50%;
+}
+
+.profile__picture {
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.profile__picture:hover {
+  opacity: 0.2;
+}
+
+.profile__container {
+  display: flex;
+  gap: 30px;
+}
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__input {
+  align-self: center;
+  max-width: 420px;
+  border: none;
+  width: 100%;
+  height: 77px;
+}
+
+.profile__text-button {
+  display: flex;
+  align-items: baseline;
+  gap: 17px;
+}
+
+.profile__name {
+  margin: 0;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.14;
+  width: 373px;
+  transition: 0.2s;
+}
+
+.profile__about {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 16px;
+  transition: 0.2s;
+}
+
+.profile__edit-button {
+  height: 24px;
+  width: 24px;
+  border-color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  background: url(../images/edit__button.png) center no-repeat;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.5;
+}
+
+.profile__add-button {
+  width: 150px;
+  height: 50px;
+  align-self: center;
+  background: url(../images/Add__button.png) center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile__add-button:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 740px) {
+  .profile {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .profile__container {
+    flex-direction: column;
+  }
+
+  .profile__pic-button {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    align-self: center;
+  }
+
+  .profile__add-button {
+    width: 282px;
+    margin: 36px 0;
+    background: url(../images/Add__button-wide.png) center no-repeat;
+  }
+
+  .profile__add-image {
+    width: 100%;
+    height: 80px;
+  }
+
+  .profile__name {
+    font-size: 22px;
+    max-width: 201px;
+  }
+
+  .profile__about {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .profile__edit-button {
+    height: 18px;
+    width: 18px;
+  }
+
+  .profile__text-button {
+    gap: 12px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .profile__input {
+    display: flex;
+    flex-direction: column;
+  }
+}
