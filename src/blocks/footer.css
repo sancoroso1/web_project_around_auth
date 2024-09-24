@@ -1,5 +1,6 @@
 .footer {
-  max-width: 882px;
+  width: 69%;
+  max-width: 880px;
   display: flex;
   justify-content: flex-start;
   padding: 60px 0;
@@ -10,8 +11,8 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 880px) {
   .footer {
-    max-width: 280px;
+    width: 90%;
   }
 }

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 import PopupWithForm from "./PopupWithForm";
 function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
@@ -16,7 +16,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
     <>
       <PopupWithForm
         name={"changepic"}
-        title={"Change profile picture"}
+        title={"Cambiar foto de perfil"}
         buttonName={"Save"}
         isOpen={isOpen}
         onClose={onClose}
@@ -28,10 +28,11 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
             name="image"
             id="pic-input"
             className="popup__input popup__input_type_picture"
-            placeholder="Picture link"
+            placeholder="Link de la imagen"
             ref={avatarRef}
             required
           />
+
           <span className="pic-input-error"></span>
         </label>
       </PopupWithForm>

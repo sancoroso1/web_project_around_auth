@@ -9,7 +9,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlaceSubmit }) {
     e.preventDefault();
     onAddPlaceSubmit({ name: name.current.value, link: link.current.value });
   }
-  
   return (
     <>
       <PopupWithForm
@@ -28,7 +27,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlaceSubmit }) {
             ref={name}
             id="title-input"
             className="popup__input popup__input_type_title"
-            placeholder="Title"
+            placeholder="Titulo"
             minLength={2}
             maxLength={30}
             required
@@ -42,7 +41,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlaceSubmit }) {
             ref={link}
             id="image-input"
             className="popup__input popup__input_type_image"
-            placeholder="Picture Link"
+            placeholder="Link de la imagen"
             required
           />
           <span className="image-input-error" />
@@ -51,5 +50,4 @@ function AddPlacePopup({ isOpen, onClose, onAddPlaceSubmit }) {
     </>
   );
 }
-
 export default AddPlacePopup;

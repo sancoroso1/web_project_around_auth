@@ -3,7 +3,6 @@ class Api {
     this._baseUrl = options.baseUrl;
     this._headers = options.headers;
   }
-
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
@@ -11,10 +10,10 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
-
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
@@ -22,10 +21,10 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
-
   editUserInfo(name, about) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
@@ -38,10 +37,10 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
-
   addCard({ name, link }) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
@@ -54,6 +53,7 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
@@ -67,6 +67,7 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
@@ -79,6 +80,7 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
@@ -91,6 +93,7 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }
@@ -110,6 +113,7 @@ class Api {
       if (res.ok) {
         return res.json();
       }
+
       return Promise.reject(`Error: ${res.status}`);
     });
   }

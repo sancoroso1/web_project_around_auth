@@ -9,8 +9,8 @@ function ConfirmDeletePopup({ cardId, onClose, onCardDelete, card }) {
     <>
       <PopupWithForm
         name={"erase"}
-        title={"This action cannot be reversed"}
-        buttonName={"Delete"}
+        title={"¿Confirmar?"}
+        buttonName={"Borrar"}
         isOpen={cardId}
         onClose={onClose}
         onSubmit={handleSubmit}

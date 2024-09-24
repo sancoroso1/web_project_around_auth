@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contexts/CurrentUserContext";
 import PopupWithForm from "./PopupWithForm";
-
 function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
   const currentUser = useContext(UserContext);
+
   useEffect(() => {
     setName(currentUser.name);
     setDescription(currentUser.about);
@@ -14,6 +14,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     onUpdateUser({
       name,
       about: description,
@@ -24,7 +25,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
     <>
       <PopupWithForm
         name={"profile"}
-        title={"Edit Profile"}
+        title={"Edit profile"}
         buttonName={"Save"}
         isOpen={isOpen}
         onClose={onClose}
@@ -37,13 +38,14 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
             name="name"
             id="name-input"
             className="popup__input popup__input_type_name"
-            placeholder="Name"
-            minLength="2"
-            maxLength="40"
+            placeholder="Nombre"
+            minLength={2}
+            maxLength={40}
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
+
           <span className="name-input-error"></span>
         </label>
         <label>
@@ -52,13 +54,14 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
             name="about"
             id="about-input"
             className="popup__input popup__input_type_about"
-            placeholder="Description"
-            minLength="2"
-            maxLength="200"
+            placeholder="Sobre mi"
+            minLength={2}
+            maxLength={200}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
           />
+
           <span className="about-input-error"></span>
         </label>
       </PopupWithForm>

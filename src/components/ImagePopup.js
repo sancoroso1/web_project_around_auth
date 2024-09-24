@@ -12,11 +12,12 @@ function ImagePopup({ card, onClose }) {
             onClick={onClose}
           >
             <img
-              src={require("../images/Close__Icon.png")}
-              alt="Close icon"
+              src={require("../styles/images/Close__Icon.png")}
+              alt="Boton cerrar"
             />
           </button>
           <img src={card.link} alt={card.name} className="popup__image-large" />
+
           <p className="popup__text-sub">{card.name}</p>
         </div>
       </section>
