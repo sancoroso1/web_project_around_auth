@@ -27,7 +27,7 @@ function Main({
         text={userEmail}
         exit={
           <button className='header__logout' onClick={handleLogout}>
-            Cerrar sesiòn
+            Cerrar sesión
           </button>
         }
       />

@@ -26,7 +26,7 @@ function InfoToolTip({ isOpen, popupType, handleClose }) {
                 <p className='popup__message'>
                   {popupType === 'success'
                     ? '¡Correcto! Ya estàs registrado.'
-                    : 'Uy, algo saliò mal. Por favor, intentalo de nuevo.'}
+                    : 'Uy, algo salió mal. Por favor, intentalo de nuevo.'}
                 </p>
               </div>
             </fieldset>

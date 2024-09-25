@@ -42,7 +42,7 @@ function Login({ handleLogin }) {
             name='password'
             id='password-input'
             className='auth__input'
-            placeholder='Senha'
+            placeholder='Contraseña'
             minLength={2}
             maxLength={200}
             value={password}
@@ -51,12 +51,12 @@ function Login({ handleLogin }) {
           />
         </label>
         <button type='submit' className='auth__buttom'>
-          Entrar
+          Ingresar
         </button>
         <span className='auth__subtitle'>
-          ¿Aùn no eres miembro?{' '}
+          ¿Aún no eres miembro?{' '}
           <Link to='/register' className='auth__link'>
-            Registrate aquì
+            Registrate aquí
           </Link>
         </span>
       </form>

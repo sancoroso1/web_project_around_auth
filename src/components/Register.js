@@ -27,7 +27,7 @@ function Register({ handleRegister, handleRegisterError }) {
 
   return (
     <>
-      <Header text={'Faça o login'}></Header>
+      <Header text={'Registrase'}></Header>
       <form className='auth__container' onSubmit={handleSubmit}>
         <h3 className='auth__title'>Registrarse</h3>
         <label>
@@ -50,7 +50,7 @@ function Register({ handleRegister, handleRegisterError }) {
             name='password'
             id='password-input'
             className='auth__input'
-            placeholder='Senha'
+            placeholder='Contraseña'
             minLength={2}
             maxLength={200}
             value={password}
@@ -62,9 +62,9 @@ function Register({ handleRegister, handleRegisterError }) {
           Registrarse
         </button>
         <span className='auth__subtitle'>
-          ¿Ya eres miembro?
+          ¿Ya eres miembro?{' '}
           <Link to='/login' className='auth__link'>
-            ¡Inicia sesiòn aquì!
+            ¡Inicia sesión aquí!
           </Link>
         </span>
       </form>

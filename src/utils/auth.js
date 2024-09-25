@@ -20,7 +20,7 @@ export const register = (email, password) => {
     .catch((res) =>
       res
         .status(ERROR_INVALID_DATA)
-        .send({ message: 'Uno de los campos se completó incorrectamente.'})
+        .send({ message: 'uno de los campos se rellenó de forma incorrecta'})
     );
 };
 
@@ -44,10 +44,10 @@ export const authorize = (email, password) => {
       if (err.name === 'ValidationError') {
         res
           .status(ERROR_INVALID_DATA)
-          .send({ message: 'Uno de los campos se completó incorrectamente.' });
+          .send({ message: 'no se ha proporcionado uno o más campos' });
       } else {
         res.status(ERROR_NOT_FOUND).send({
-          message: 'Usuario con correo electrónico especificado no encontrado',
+          message: 'no se ha encontrado al usuario con el correo electrónico especificado',
         });
       }
     });
@@ -67,11 +67,11 @@ export const checkToken = (token) => {
     .catch((err, res) => {
       if (err.name === 'ValidationError') {
         res.status(ERROR_INVALID_DATA).send({
-          message: 'Token no proporcionado o proporcionado en formato incorrecto',
+          message: 'Token no proporcionado o proporcionado en el formato incorrecto',
         });
       } else {
         res.status(ERROR_NOT_FOUND).send({
-          message: 'El token proporcionado no es válido',
+          message: 'El token provisto es inválido',
         });
       }
     });
